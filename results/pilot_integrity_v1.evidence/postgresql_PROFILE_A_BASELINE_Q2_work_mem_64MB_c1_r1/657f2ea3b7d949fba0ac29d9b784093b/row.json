@@ -1,0 +1,16 @@
+{
+  "timestamp_epoch": 1793508328,
+  "engine": "postgresql",
+  "profile": "PROFILE_A_BASELINE",
+  "query_id": "Q2_work_mem_64MB",
+  "concurrency": 1,
+  "run_number": 1,
+  "throughput_qps": null,
+  "latency_p50_ms": null,
+  "latency_p95_ms": null,
+  "latency_p99_ms": null,
+  "cpu_throttled_seconds": null,
+  "max_rss_mb": null,
+  "disk_spill": null,
+  "status": "error"
+}

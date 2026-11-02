@@ -1,0 +1,35 @@
+{
+  "valid": true,
+  "contract": "68df12911b25168a12a04f06e3f5bf48f821fa708e5dcf9cc0826dd4a06d61e4",
+  "durations": [
+    5.0,
+    15.0,
+    3.0
+  ],
+  "row": {
+    "timestamp_epoch": "1793508298",
+    "engine": "postgresql",
+    "profile": "PROFILE_A_BASELINE",
+    "query_id": "Q2_work_mem_4MB",
+    "concurrency": "1",
+    "run_number": "1",
+    "throughput_qps": "3.4",
+    "latency_p50_ms": "207.24",
+    "latency_p95_ms": "724.06",
+    "latency_p99_ms": "814.46",
+    "cpu_throttled_seconds": "5.478856",
+    "max_rss_mb": "34.820312",
+    "disk_spill": "False",
+    "status": "ok"
+  },
+  "files": {
+    "worker_0.json": "caec93f260d8b77ec9d23ac0c661d4e166530823efd8cc2093c4f5d01934c1f5",
+    "replay.json": "5558a24f87c0100606f8226c468f9447a65825c1699e34b9205f2d55ea0dbe81",
+    "telemetry.json": "df3f00e442440bf05afcf7a95223779c31d600916d8792254ac7a288da9f615d",
+    "replay_plan.txt": "0abc1d8c6f1800b7fb18b34e1d975142c2787b22ba43fc9bc077686d433d5cc4",
+    "row.json": "f309c53ad819b1feebf6e04bb2ab1ea4ed54b31af3276731db107c184db36735",
+    "manifest.json": "06525ca5576c2a931ca157c1a9960e2c434e5841415a5d2393ff89bd26effa09",
+    "measured_postgresql.log": "780e45e0c04ff935fe978449861b6f3d5595376120ff2c2c80ff43fdd8a26227",
+    "measured_spill.json": "55a6efab1eb6a246f3dbb7a85f51bb09694f295da4381811024ff6bfff17528e"
+  }
+}

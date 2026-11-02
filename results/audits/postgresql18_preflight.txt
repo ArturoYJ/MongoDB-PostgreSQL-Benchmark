@@ -1,0 +1,5 @@
+/Users/arturoyj/Universidad Politecnica/7 cuatrimestre/BDaaS/U2/playbook/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Source dataset verified: 500,000 unique order IDs and full-document hashes.
+Prometheus, cAdvisor and Node Exporter targets are healthy; required container series are present.
+PREFLIGHT PASS: engine=postgresql; version=PostgreSQL 18.6 (Debian 18.6-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit; documents=500,000; full records and indexes match.

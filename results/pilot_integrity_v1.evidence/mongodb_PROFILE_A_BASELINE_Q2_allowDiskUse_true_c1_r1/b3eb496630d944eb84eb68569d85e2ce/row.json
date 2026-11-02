@@ -1,0 +1,16 @@
+{
+  "timestamp_epoch": 1793508198,
+  "engine": "mongodb",
+  "profile": "PROFILE_A_BASELINE",
+  "query_id": "Q2_allowDiskUse_true",
+  "concurrency": 1,
+  "run_number": 1,
+  "throughput_qps": 2.333333,
+  "latency_p50_ms": 381.94,
+  "latency_p95_ms": 625.07,
+  "latency_p99_ms": 902.67,
+  "cpu_throttled_seconds": 0.0,
+  "max_rss_mb": 766.234375,
+  "disk_spill": false,
+  "status": "ok"
+}
