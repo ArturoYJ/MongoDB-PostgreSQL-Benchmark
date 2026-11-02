@@ -1,0 +1,23 @@
+{
+  "dataset": {
+    "path": "data/orders.jsonl",
+    "format": "JSON Lines (one order object per line)",
+    "record_count": 500000,
+    "size_bytes": 613728920,
+    "sha256": "747396b2705e0ff4f7b842cff00a82eb67dc3682a082e6f171b6475e43f2884d"
+  },
+  "generator": {
+    "path": "synthetic_data_generator.py",
+    "sha256": "c7cefd14d35bdf03e78920c7d5b7ed7ef828dac7e0fb09300b6777989f62f335",
+    "reproduction_defaults": {
+      "count": 500000,
+      "seed": 42,
+      "batch_size": 10000
+    },
+    "original_invocation_captured": false
+  },
+  "manifest_environment": {
+    "python_version": "3.9.6",
+    "note": "Environment at manifest creation; original generation environment was not recorded."
+  }
+}
