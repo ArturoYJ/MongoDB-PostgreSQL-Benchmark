@@ -1,0 +1,502 @@
+
+--- STDERR ---
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:39:34.030 UTC [389] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:39:34.030 UTC [389] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:39:34.032 UTC [388] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:39:34.032 UTC [388] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:39:34.126 UTC [390] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:39:34.126 UTC [390] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:39:34.142 UTC [392] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:39:34.142 UTC [392] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:39:34.222 UTC [393] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:39:34.222 UTC [393] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:43:15.919 UTC [421] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:43:15.919 UTC [421] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:43:15.924 UTC [420] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:43:15.924 UTC [420] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:43:15.927 UTC [422] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:43:15.927 UTC [422] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:43:16.025 UTC [424] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:43:16.025 UTC [424] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:43:16.025 UTC [423] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:43:16.025 UTC [423] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:43:16.151 UTC [425] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:43:16.151 UTC [425] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:47:01.435 UTC [453] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:47:01.435 UTC [453] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:47:01.513 UTC [458] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:47:01.513 UTC [458] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:47:01.515 UTC [454] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:47:01.515 UTC [454] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:47:01.516 UTC [455] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:47:01.516 UTC [455] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:47:01.517 UTC [456] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:47:01.517 UTC [456] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:47:01.526 UTC [457] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:47:01.526 UTC [457] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:50:46.276 UTC [488] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:50:46.276 UTC [488] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:50:46.285 UTC [491] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:50:46.285 UTC [491] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:50:46.286 UTC [487] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:50:46.286 UTC [487] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:50:46.287 UTC [486] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:50:46.287 UTC [486] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:50:46.290 UTC [490] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:50:46.290 UTC [490] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:50:46.305 UTC [489] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:50:46.305 UTC [489] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:50:46.311 UTC [484] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:50:46.311 UTC [484] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:54:25.812 UTC [518] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:54:25.812 UTC [518] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:54:25.815 UTC [519] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:54:25.815 UTC [519] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:54:25.822 UTC [516] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:54:25.822 UTC [516] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:54:25.823 UTC [517] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:54:25.823 UTC [517] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:54:25.827 UTC [520] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:54:25.827 UTC [520] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:54:25.933 UTC [521] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:54:25.933 UTC [521] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:54:26.015 UTC [522] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:54:26.015 UTC [522] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:58:05.305 UTC [549] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:58:05.305 UTC [549] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:58:05.308 UTC [551] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:58:05.308 UTC [551] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:58:05.316 UTC [550] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:58:05.316 UTC [550] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:58:05.416 UTC [557] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:58:05.416 UTC [557] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:58:05.416 UTC [558] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:58:05.416 UTC [558] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:58:05.420 UTC [554] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:58:05.420 UTC [554] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:01:52.521 UTC [583] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:01:52.521 UTC [583] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:01:52.552 UTC [579] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:01:52.552 UTC [579] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:01:52.706 UTC [584] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:01:52.706 UTC [584] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:01:52.708 UTC [587] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:01:52.708 UTC [587] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:01:52.817 UTC [592] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:01:52.817 UTC [592] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:01:52.824 UTC [594] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:01:52.824 UTC [594] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:05:39.808 UTC [615] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:05:39.808 UTC [615] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:05:39.814 UTC [613] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:05:39.814 UTC [613] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:05:39.817 UTC [617] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:05:39.817 UTC [617] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:05:39.914 UTC [618] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:05:39.914 UTC [618] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:05:40.010 UTC [624] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:05:40.010 UTC [624] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:05:40.012 UTC [623] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:05:40.012 UTC [623] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:09:27.657 UTC [647] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:09:27.657 UTC [647] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:09:27.761 UTC [648] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:09:27.761 UTC [648] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:09:27.765 UTC [649] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:09:27.765 UTC [649] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:09:27.767 UTC [652] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:09:27.767 UTC [652] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:09:27.767 UTC [651] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:09:27.767 UTC [651] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:09:27.773 UTC [650] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:09:27.773 UTC [650] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;

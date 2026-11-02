@@ -1,0 +1,88 @@
+[
+  {
+    "Id": "3354e0d8803583f1520e40aac2fb1c7a7077d41003fce9e5878649be82a91ef2",
+    "Name": "/benchmark_mongodb",
+    "Image": "sha256:452bdaf2127b8ff851e31410a267809b9829eded219979f2210e7c7efb85a058",
+    "State": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-01T11:40:50.071790709Z",
+      "FinishedAt": "2026-11-01T15:41:08.275189884Z"
+    },
+    "Mounts": [
+      {
+        "Type": "volume",
+        "Name": "playbook_mongodb_data",
+        "Source": "/var/lib/docker/volumes/playbook_mongodb_data/_data",
+        "Destination": "/data/db",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "volume",
+        "Name": "78dbeee435a9fc6a8875f5d82843c5ee2fb34f618ecb6988705c92dffd45e6fc",
+        "Source": "/var/lib/docker/volumes/78dbeee435a9fc6a8875f5d82843c5ee2fb34f618ecb6988705c92dffd45e6fc/_data",
+        "Destination": "/data/configdb",
+        "Driver": "local",
+        "Mode": "z",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/arturoyj/Universidad Politecnica/7 cuatrimestre/BDaaS/U2/playbook/data",
+        "Destination": "/data/import",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      }
+    ]
+  },
+  {
+    "Id": "cbf40a529e9b72ac035dbffb8fc126b986b3b6680ec423afcc17ed13b3c56d17",
+    "Name": "/benchmark_postgresql",
+    "Image": "sha256:3a4264520e121176619f54ff867d12774bc81e95e7b84db58d63bccdb6144b81",
+    "State": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": true,
+      "Dead": false,
+      "Pid": 41506,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-01T22:15:30.892317125Z",
+      "FinishedAt": "0001-01-01T00:00:00Z"
+    },
+    "Mounts": [
+      {
+        "Type": "volume",
+        "Name": "playbook_postgres_data",
+        "Source": "/var/lib/docker/volumes/playbook_postgres_data/_data",
+        "Destination": "/var/lib/postgresql",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "bind",
+        "Source": "/host_mnt/Users/arturoyj/Universidad Politecnica/7 cuatrimestre/BDaaS/U2/playbook/data",
+        "Destination": "/data/import",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      }
+    ]
+  }
+]

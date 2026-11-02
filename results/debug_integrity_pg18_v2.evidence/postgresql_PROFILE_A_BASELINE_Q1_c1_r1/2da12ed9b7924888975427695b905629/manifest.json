@@ -1,0 +1,42 @@
+{
+  "args": {
+    "engine": "postgresql",
+    "profile": "PROFILE_A_BASELINE",
+    "query": "Q1",
+    "concurrency": 1,
+    "run_number": 1,
+    "variant": "default",
+    "warmup": 2.0,
+    "duration": 15.0,
+    "cooldown": 1.0,
+    "query_timeout": 60.0,
+    "output_csv": "results/debug_integrity_pg18_v2.csv",
+    "prometheus_url": "http://127.0.0.1:9090",
+    "pg_port": 5434
+  },
+  "contract": "a9d5133876d1cb7e298c27572858f7f029da19bb8e937e34321e59832eebfc98",
+  "attempt": "2da12ed9b7924888975427695b905629",
+  "key": "postgresql_PROFILE_A_BASELINE_Q1_c1_r1",
+  "valid": true,
+  "environment": {
+    "container_id": "a0fd7c450345bc1a381badb1ceae1359258ba08f366ce86bbcb0ef034cfef67d",
+    "image": "sha256:3a4264520e121176619f54ff867d12774bc81e95e7b84db58d63bccdb6144b81",
+    "architecture": "arm64",
+    "profile": "PROFILE_A_BASELINE",
+    "cgroups": "cpu.max\n400000 100000\nmemory.max\n4294967296\nmemory.swap.max\n0\nmemory.events\nlow 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n"
+  },
+  "oom_events": [],
+  "window": {
+    "monotonic": [
+      10.957209625,
+      25.957209625
+    ],
+    "epoch": [
+      1793507890.767317,
+      1793507905.767317
+    ]
+  },
+  "completed": 3,
+  "tail_completions": 1,
+  "worker_errors": []
+}

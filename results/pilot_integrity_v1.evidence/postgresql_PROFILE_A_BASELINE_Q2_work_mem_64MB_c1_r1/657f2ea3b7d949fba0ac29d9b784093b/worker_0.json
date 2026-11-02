@@ -1,0 +1,11 @@
+{
+  "worker": 0,
+  "records": [],
+  "error": {
+    "phase": "warmup",
+    "type": "OperationalError",
+    "message": "server closed the connection unexpectedly\n\tThis probably means the server terminated abnormally\n\tbefore or while processing the request.\n",
+    "code": null,
+    "pgcode": null
+  }
+}

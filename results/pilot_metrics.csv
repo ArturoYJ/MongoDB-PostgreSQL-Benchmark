@@ -1,0 +1,7 @@
+timestamp_epoch,engine,profile,query_id,concurrency,run_number,throughput_qps,latency_p50_ms,latency_p95_ms,latency_p99_ms,cpu_throttled_seconds,max_rss_mb,disk_spill,status
+1793505999,mongodb,PROFILE_A_BASELINE,Q1,1,1,0.6,1773.56,2043.62,2127.62,0.0,725.09,False,ok
+1793506028,mongodb,PROFILE_A_BASELINE,Q2_allowDiskUse_false,1,1,2.07,382.25,979.71,1614.96,0.0,735.62,False,ok
+1793506058,mongodb,PROFILE_A_BASELINE,Q2_allowDiskUse_true,1,1,1.8,426.4,1285.72,3019.58,0.0,739.8,False,ok
+1793506108,postgresql,PROFILE_A_BASELINE,Q1,1,1,0.2,4634.86,5875.31,5985.57,0.0,94.5,True,spill
+1793506141,postgresql,PROFILE_A_BASELINE,Q2_work_mem_4MB,1,1,4.33,181.09,428.0,703.55,0.0,33.46,False,ok
+1793506169,postgresql,PROFILE_A_BASELINE,Q2_work_mem_64MB,1,1,4.73,180.29,400.23,521.57,0.0,33.63,False,ok

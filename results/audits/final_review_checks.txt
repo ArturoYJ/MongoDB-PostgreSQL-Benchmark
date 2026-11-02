@@ -1,0 +1,9 @@
+/Users/arturoyj/Universidad Politecnica/7 cuatrimestre/BDaaS/U2/playbook/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+PLAN COLLISION: 162 runs generate only 54 distinct plan paths
+RESUME: error row accepted as completed=True
+MEASUREMENT TAIL: duration=1s, simulated query=2s, latencies counted=[2000.0], worker_error=False
+NONFINITE: instant NaN accepted=True, resulting status=ok
+COVERAGE: one sample in 300s window accepted=10.0
+PREFLIGHT: nonempty NaN telemetry accepted
+QUEUE: child alive after join-before-read=True; after draining=False; exit=0; n=100000

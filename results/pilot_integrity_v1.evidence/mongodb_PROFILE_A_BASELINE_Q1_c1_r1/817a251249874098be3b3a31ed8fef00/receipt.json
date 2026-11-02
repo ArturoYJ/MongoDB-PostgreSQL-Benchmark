@@ -1,0 +1,35 @@
+{
+  "valid": true,
+  "contract": "68df12911b25168a12a04f06e3f5bf48f821fa708e5dcf9cc0826dd4a06d61e4",
+  "durations": [
+    5.0,
+    15.0,
+    3.0
+  ],
+  "row": {
+    "timestamp_epoch": "1793508127",
+    "engine": "mongodb",
+    "profile": "PROFILE_A_BASELINE",
+    "query_id": "Q1",
+    "concurrency": "1",
+    "run_number": "1",
+    "throughput_qps": "0.466667",
+    "latency_p50_ms": "2024.02",
+    "latency_p95_ms": "2454.06",
+    "latency_p99_ms": "2522.21",
+    "cpu_throttled_seconds": "0.0",
+    "max_rss_mb": "727.738281",
+    "disk_spill": "False",
+    "status": "ok"
+  },
+  "files": {
+    "worker_0.json": "6ee1c865cb801edb41bb7cf3b09eecf27c4f92857f71059e27efcb92d34137da",
+    "replay_plan.json": "05cd824f405788fc280640e20af506ffe4ac2f6e5e384e08f5558fbedaa30922",
+    "replay.json": "5558a24f87c0100606f8226c468f9447a65825c1699e34b9205f2d55ea0dbe81",
+    "measured_profile.json": "4377536a1247257e82c9e85b6d8659b6c2caef21ee6c4fb91a53833386874f32",
+    "telemetry.json": "f69f86469e9ff7ae315a6b983aa9ac7d15f2186a984d458fe2daa7348d621b76",
+    "row.json": "8d34a20b3014a4445861082848dc6192805c7113cd42baf01f3450d4ea8a3c9e",
+    "manifest.json": "0edc2559a171a7e068361f6911803e5aad2f7a9f08812b254374f463c57750ee",
+    "measured_spill.json": "472c8462a1ca48a251a1afc3f64abb9692bc3c6036e0d11de4e61f06de03a05e"
+  }
+}

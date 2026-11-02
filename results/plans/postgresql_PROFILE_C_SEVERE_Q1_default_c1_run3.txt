@@ -1,0 +1,34 @@
+GroupAggregate  (cost=384318.28..3270765.85 rows=16497459 width=136) (actual time=5957.551..8732.259 rows=64.00 loops=1)
+  Group Key: ((((orders.data -> 'customer'::text) -> 'geo'::text) ->> 'country'::text)), ((item.value ->> 'category'::text))
+  Buffers: shared hit=15977 read=82077, temp read=200628 written=200860
+  ->  Incremental Sort  (cost=384318.28..2404649.25 rows=16497459 width=96) (actual time=5948.979..8272.147 rows=901197.00 loops=1)
+        Sort Key: ((((orders.data -> 'customer'::text) -> 'geo'::text) ->> 'country'::text)), ((item.value ->> 'category'::text))
+        Presorted Key: ((((orders.data -> 'customer'::text) -> 'geo'::text) ->> 'country'::text))
+        Full-sort Groups: 8  Sort Method: quicksort  Average Memory: 37kB  Peak Memory: 37kB
+        Pre-sorted Groups: 8  Sort Method: external merge  Average Disk: 20872kB  Peak Disk: 20872kB
+        Buffers: shared hit=15977 read=82077, temp read=200628 written=200860
+        ->  Nested Loop  (cost=384314.67..1772334.13 rows=16497459 width=96) (actual time=4309.379..6420.921 rows=901197.00 loops=1)
+              Buffers: shared hit=15977 read=82077, temp read=179950 written=180134
+              ->  Gather Merge  (cost=384314.67..442538.94 rows=499923 width=1457) (actual time=4309.065..5188.116 rows=500000.00 loops=1)
+                    Workers Planned: 2
+                    Workers Launched: 2
+                    Buffers: shared hit=15977 read=82077, temp read=179950 written=180134
+                    ->  Sort  (cost=383314.65..383835.40 rows=208301 width=1457) (actual time=4258.076..4484.807 rows=166666.67 loops=3)
+                          Sort Key: ((((orders.data -> 'customer'::text) -> 'geo'::text) ->> 'country'::text))
+                          Sort Method: external merge  Disk: 228880kB
+                          Buffers: shared hit=15977 read=82077, temp read=179950 written=180134
+                          Worker 0:  Sort Method: external merge  Disk: 245456kB
+                          Worker 1:  Sort Method: external merge  Disk: 245504kB
+                          ->  Parallel Seq Scan on orders  (cost=0.00..100061.01 rows=208301 width=1457) (actual time=413.537..1704.294 rows=166666.67 loops=3)
+                                Buffers: shared hit=15901 read=82077
+              ->  Function Scan on jsonb_array_elements item  (cost=0.01..2.00 rows=33 width=32) (actual time=0.001..0.002 rows=1.80 loops=500000)
+                    Filter: (((value ->> 'price'::text))::numeric > '50'::numeric)
+                    Rows Removed by Filter: 1
+Planning:
+  Buffers: shared hit=183 read=19
+Planning Time: 10.420 ms
+JIT:
+  Functions: 17
+  Options: Inlining true, Optimization true, Expressions true, Deforming true
+  Timing: Generation 3.651 ms (Deform 0.369 ms), Inlining 843.342 ms, Optimization 142.766 ms, Emission 253.593 ms, Total 1243.352 ms
+Execution Time: 8939.293 ms

@@ -1,0 +1,113 @@
+
+PostgreSQL Database directory appears to contain a database; Skipping initialization
+
+
+PostgreSQL Database directory appears to contain a database; Skipping initialization
+
+
+PostgreSQL Database directory appears to contain a database; Skipping initialization
+
+
+PostgreSQL Database directory appears to contain a database; Skipping initialization
+
+
+PostgreSQL Database directory appears to contain a database; Skipping initialization
+
+
+--- STDERR ---
+2026-11-01 03:57:38.682 UTC [1] LOG:  starting PostgreSQL 17.11 (Debian 17.11-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-11-01 03:57:38.682 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-01 03:57:38.682 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-01 03:57:38.684 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-01 03:57:38.689 UTC [29] LOG:  database system was shut down at 2026-11-01 02:49:12 UTC
+2026-11-01 03:57:38.706 UTC [1] LOG:  database system is ready to accept connections
+2026-11-01 03:57:50.924 UTC [1] LOG:  received fast shutdown request
+2026-11-01 03:57:50.925 UTC [1] LOG:  aborting any active transactions
+2026-11-01 03:57:50.933 UTC [1] LOG:  background worker "logical replication launcher" (PID 32) exited with exit code 1
+2026-11-01 03:57:50.934 UTC [27] LOG:  shutting down
+2026-11-01 03:57:50.935 UTC [27] LOG:  checkpoint starting: shutdown immediate
+2026-11-01 03:57:50.943 UTC [27] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.002 s, total=0.010 s; sync files=3, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/3423A618, redo lsn=0/3423A618
+2026-11-01 03:57:50.948 UTC [1] LOG:  database system is shut down
+2026-11-01 03:57:58.617 UTC [1] LOG:  starting PostgreSQL 17.11 (Debian 17.11-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-11-01 03:57:58.617 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-01 03:57:58.617 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-01 03:57:58.618 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-01 03:57:58.620 UTC [29] LOG:  database system was shut down at 2026-11-01 03:57:50 UTC
+2026-11-01 03:57:58.623 UTC [1] LOG:  database system is ready to accept connections
+2026-11-01 03:57:58.842 UTC [33] ERROR:  functions in index expression must be marked IMMUTABLE
+2026-11-01 03:57:58.842 UTC [33] STATEMENT:  CREATE INDEX IF NOT EXISTS idx_orders_timestamp_timestamptz ON orders (((data->>'timestamp')::timestamptz))
+2026-11-01 03:58:50.452 UTC [1] LOG:  received fast shutdown request
+2026-11-01 03:58:50.453 UTC [1] LOG:  aborting any active transactions
+2026-11-01 03:58:50.471 UTC [1] LOG:  background worker "logical replication launcher" (PID 32) exited with exit code 1
+2026-11-01 03:58:50.471 UTC [27] LOG:  shutting down
+2026-11-01 03:58:50.472 UTC [27] LOG:  checkpoint starting: shutdown immediate
+2026-11-01 03:58:50.477 UTC [27] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.006 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/3423A6C8, redo lsn=0/3423A6C8
+2026-11-01 03:58:50.482 UTC [1] LOG:  database system is shut down
+2026-11-01 03:59:06.136 UTC [1] LOG:  starting PostgreSQL 17.11 (Debian 17.11-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-11-01 03:59:06.136 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-01 03:59:06.136 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-01 03:59:06.138 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-01 03:59:06.141 UTC [29] LOG:  database system was shut down at 2026-11-01 03:58:50 UTC
+2026-11-01 03:59:06.148 UTC [1] LOG:  database system is ready to accept connections
+2026-11-01 03:59:29.068 UTC [1] LOG:  received fast shutdown request
+2026-11-01 03:59:29.074 UTC [1] LOG:  aborting any active transactions
+2026-11-01 03:59:29.088 UTC [1] LOG:  background worker "logical replication launcher" (PID 32) exited with exit code 1
+2026-11-01 03:59:29.088 UTC [27] LOG:  shutting down
+2026-11-01 03:59:29.089 UTC [27] LOG:  checkpoint starting: shutdown immediate
+2026-11-01 03:59:29.098 UTC [27] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.001 s, total=0.010 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/3423A778, redo lsn=0/3423A778
+2026-11-01 03:59:29.103 UTC [1] LOG:  database system is shut down
+2026-11-01 03:59:56.955 UTC [1] LOG:  starting PostgreSQL 17.11 (Debian 17.11-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-11-01 03:59:56.957 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-01 03:59:56.957 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-01 03:59:56.959 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-01 03:59:56.965 UTC [28] LOG:  database system was shut down at 2026-11-01 03:59:29 UTC
+2026-11-01 03:59:56.973 UTC [1] LOG:  database system is ready to accept connections
+2026-11-01 04:00:15.297 UTC [1] LOG:  received fast shutdown request
+2026-11-01 04:00:15.308 UTC [1] LOG:  aborting any active transactions
+2026-11-01 04:00:15.346 UTC [1] LOG:  background worker "logical replication launcher" (PID 31) exited with exit code 1
+2026-11-01 04:00:15.352 UTC [26] LOG:  shutting down
+2026-11-01 04:00:15.354 UTC [26] LOG:  checkpoint starting: shutdown immediate
+2026-11-01 04:00:15.379 UTC [26] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.017 s, sync=0.002 s, total=0.027 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/3423A828, redo lsn=0/3423A828
+2026-11-01 04:00:15.408 UTC [1] LOG:  database system is shut down
+2026-11-01 04:01:58.780 UTC [1] LOG:  starting PostgreSQL 17.11 (Debian 17.11-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-11-01 04:01:58.780 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-01 04:01:58.781 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-01 04:01:58.781 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-01 04:01:58.784 UTC [29] LOG:  database system was shut down at 2026-11-01 04:00:15 UTC
+2026-11-01 04:01:58.792 UTC [1] LOG:  database system is ready to accept connections
+2026-11-01 04:02:18.310 UTC [1] LOG:  received fast shutdown request
+2026-11-01 04:02:18.311 UTC [1] LOG:  aborting any active transactions
+2026-11-01 04:02:18.313 UTC [38] FATAL:  terminating background worker "parallel worker" due to administrator command
+2026-11-01 04:02:18.313 UTC [38] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 04:02:18.327 UTC [1] LOG:  background worker "logical replication launcher" (PID 32) exited with exit code 1
+2026-11-01 04:02:18.334 UTC [37] FATAL:  terminating background worker "parallel worker" due to administrator command
+2026-11-01 04:02:18.334 UTC [37] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 04:02:18.359 UTC [36] FATAL:  terminating connection due to administrator command
+2026-11-01 04:02:18.359 UTC [36] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 04:02:18.361 UTC [1] LOG:  background worker "parallel worker" (PID 38) exited with exit code 1
+2026-11-01 04:02:18.366 UTC [1] LOG:  background worker "parallel worker" (PID 37) exited with exit code 1
+2026-11-01 04:02:18.402 UTC [27] LOG:  shutting down
+2026-11-01 04:02:18.402 UTC [27] LOG:  checkpoint starting: shutdown immediate
+2026-11-01 04:02:18.417 UTC [27] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.007 s, sync=0.001 s, total=0.015 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/3423A8D8, redo lsn=0/3423A8D8
+2026-11-01 04:02:18.424 UTC [1] LOG:  database system is shut down

@@ -1,0 +1,7 @@
+{
+  "spill": true,
+  "scope": "operations completed in the fixed measurement window",
+  "operations": [
+    "bdaas:934b9e31c66c42efbd3f48ef50e8fc21:m:0:0"
+  ]
+}

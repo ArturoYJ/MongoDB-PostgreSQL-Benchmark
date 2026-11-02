@@ -1,0 +1,4 @@
+timestamp=1793575333 status=$'oom\r' throughput=0.0
+rejected_zero_without_oom
+timestamp=1793541504 status=$'error\r' throughput=0.16
+accepted_by_current_shell_predicate

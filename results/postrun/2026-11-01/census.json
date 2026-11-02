@@ -1,0 +1,42 @@
+{
+  "header_matches": true,
+  "rows": 198,
+  "unique_keys": 162,
+  "expected_keys": 162,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "duplicate_keys": 19,
+  "extra_attempts": 36,
+  "status_all": {
+    "ok": 93,
+    "error": 32,
+    "spill": 15,
+    "oom": 58
+  },
+  "status_latest_provisional": {
+    "ok": 93,
+    "error": 12,
+    "spill": 15,
+    "oom": 42
+  },
+  "latest_by_engine": {
+    "mongodb": {
+      "ok": 75,
+      "error": 6
+    },
+    "postgresql": {
+      "spill": 15,
+      "error": 6,
+      "ok": 18,
+      "oom": 42
+    }
+  },
+  "malformed_lines": [],
+  "numeric_issues": [],
+  "missing_plans": [],
+  "invalid_plans": [],
+  "first_timestamp": 1793509845,
+  "last_timestamp": 1793582528,
+  "original_csv_sha256": "f3139481670f04f4387030ed929fcbf39f15278b6bd1e440c9b11321b9dca1f3",
+  "selection_policy": "None accepted. Latest is descriptive/provisional only."
+}

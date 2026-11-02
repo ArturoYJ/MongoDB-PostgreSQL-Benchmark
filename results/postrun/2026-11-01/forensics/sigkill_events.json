@@ -1,0 +1,578 @@
+[
+  {
+    "epoch": 1793562853.114,
+    "text": "2026-11-01 19:54:13.114 UTC [1] LOG:  io worker (PID 27) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run1.log",
+        "line": 14
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run2.log",
+        "line": 14
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run3.log",
+        "line": 14
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run1.log",
+        "line": 14
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run2.log",
+        "line": 14
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run3.log",
+        "line": 14
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run1.log",
+        "line": 14
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run2.log",
+        "line": 14
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run3.log",
+        "line": 14
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run1.log",
+        "line": 14
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run2.log",
+        "line": 14
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run3.log",
+        "line": 14
+      }
+    ]
+  },
+  {
+    "epoch": 1793562937.233,
+    "text": "2026-11-01 19:55:37.233 UTC [1] LOG:  client backend (PID 945) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run1.log",
+        "line": 25
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run2.log",
+        "line": 25
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run3.log",
+        "line": 25
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run1.log",
+        "line": 25
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run2.log",
+        "line": 25
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run3.log",
+        "line": 25
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run1.log",
+        "line": 25
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run2.log",
+        "line": 25
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run3.log",
+        "line": 25
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run1.log",
+        "line": 25
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run2.log",
+        "line": 25
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run3.log",
+        "line": 25
+      }
+    ]
+  },
+  {
+    "epoch": 1793563020.417,
+    "text": "2026-11-01 19:57:00.417 UTC [1] LOG:  background worker \"parallel worker\" (PID 1001) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run1.log",
+        "line": 44
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run2.log",
+        "line": 44
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run3.log",
+        "line": 44
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run1.log",
+        "line": 44
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run2.log",
+        "line": 44
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run3.log",
+        "line": 44
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run1.log",
+        "line": 44
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run2.log",
+        "line": 44
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run3.log",
+        "line": 44
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run1.log",
+        "line": 44
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run2.log",
+        "line": 44
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run3.log",
+        "line": 44
+      }
+    ]
+  },
+  {
+    "epoch": 1793563105.348,
+    "text": "2026-11-01 19:58:25.348 UTC [1] LOG:  client backend (PID 1114) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run2.log",
+        "line": 63
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run3.log",
+        "line": 63
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run1.log",
+        "line": 63
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run2.log",
+        "line": 63
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run3.log",
+        "line": 63
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run1.log",
+        "line": 63
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run2.log",
+        "line": 63
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run3.log",
+        "line": 63
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run1.log",
+        "line": 63
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run2.log",
+        "line": 63
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run3.log",
+        "line": 63
+      }
+    ]
+  },
+  {
+    "epoch": 1793563195.245,
+    "text": "2026-11-01 19:59:55.245 UTC [1] LOG:  client backend (PID 1157) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run2.log",
+        "line": 82
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run3.log",
+        "line": 82
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run1.log",
+        "line": 82
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run2.log",
+        "line": 82
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run3.log",
+        "line": 82
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run1.log",
+        "line": 82
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run2.log",
+        "line": 82
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run3.log",
+        "line": 82
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run1.log",
+        "line": 82
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run2.log",
+        "line": 82
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run3.log",
+        "line": 82
+      }
+    ]
+  },
+  {
+    "epoch": 1793563279.026,
+    "text": "2026-11-01 20:01:19.026 UTC [1] LOG:  client backend (PID 1220) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run2.log",
+        "line": 101
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run3.log",
+        "line": 101
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run1.log",
+        "line": 101
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run2.log",
+        "line": 101
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run3.log",
+        "line": 101
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run1.log",
+        "line": 101
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run2.log",
+        "line": 101
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run3.log",
+        "line": 101
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run1.log",
+        "line": 101
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run2.log",
+        "line": 101
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run3.log",
+        "line": 101
+      }
+    ]
+  },
+  {
+    "epoch": 1793563361.136,
+    "text": "2026-11-01 20:02:41.136 UTC [1] LOG:  client backend (PID 1286) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run3.log",
+        "line": 120
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run1.log",
+        "line": 120
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run2.log",
+        "line": 120
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run3.log",
+        "line": 120
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run1.log",
+        "line": 120
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run2.log",
+        "line": 120
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run3.log",
+        "line": 120
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run1.log",
+        "line": 120
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run2.log",
+        "line": 120
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run3.log",
+        "line": 120
+      }
+    ]
+  },
+  {
+    "epoch": 1793563447.964,
+    "text": "2026-11-01 20:04:07.964 UTC [1] LOG:  client backend (PID 1354) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run3.log",
+        "line": 139
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run1.log",
+        "line": 139
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run2.log",
+        "line": 139
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run3.log",
+        "line": 139
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run1.log",
+        "line": 139
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run2.log",
+        "line": 139
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run3.log",
+        "line": 139
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run1.log",
+        "line": 139
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run2.log",
+        "line": 139
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run3.log",
+        "line": 139
+      }
+    ]
+  },
+  {
+    "epoch": 1793563529.332,
+    "text": "2026-11-01 20:05:29.332 UTC [1] LOG:  client backend (PID 1439) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q1_c50_run3.log",
+        "line": 158
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run1.log",
+        "line": 158
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run2.log",
+        "line": 158
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c10_run3.log",
+        "line": 158
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run1.log",
+        "line": 158
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run2.log",
+        "line": 158
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c1_run3.log",
+        "line": 158
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run1.log",
+        "line": 158
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run2.log",
+        "line": 158
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_B_MEDIUM_Q2_c50_run3.log",
+        "line": 158
+      }
+    ]
+  },
+  {
+    "epoch": 1793574686.27,
+    "text": "2026-11-01 23:11:26.270 UTC [1] LOG:  io worker (PID 27) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run1.log",
+        "line": 445
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run2.log",
+        "line": 371
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run3.log",
+        "line": 298
+      }
+    ]
+  },
+  {
+    "epoch": 1793574768.257,
+    "text": "2026-11-01 23:12:48.257 UTC [1] LOG:  client backend (PID 754) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run1.log",
+        "line": 462
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run2.log",
+        "line": 388
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run3.log",
+        "line": 315
+      }
+    ]
+  },
+  {
+    "epoch": 1793574849.074,
+    "text": "2026-11-01 23:14:09.074 UTC [1] LOG:  client backend (PID 847) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run1.log",
+        "line": 481
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run2.log",
+        "line": 407
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run3.log",
+        "line": 334
+      }
+    ]
+  },
+  {
+    "epoch": 1793574930.161,
+    "text": "2026-11-01 23:15:30.161 UTC [1] LOG:  client backend (PID 891) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run2.log",
+        "line": 429
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run3.log",
+        "line": 356
+      }
+    ]
+  },
+  {
+    "epoch": 1793575009.962,
+    "text": "2026-11-01 23:16:49.962 UTC [1] LOG:  client backend (PID 960) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run2.log",
+        "line": 449
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run3.log",
+        "line": 376
+      }
+    ]
+  },
+  {
+    "epoch": 1793575091.068,
+    "text": "2026-11-01 23:18:11.068 UTC [1] LOG:  client backend (PID 1031) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run2.log",
+        "line": 473
+      },
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run3.log",
+        "line": 400
+      }
+    ]
+  },
+  {
+    "epoch": 1793575170.948,
+    "text": "2026-11-01 23:19:30.948 UTC [1] LOG:  client backend (PID 1102) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run3.log",
+        "line": 430
+      }
+    ]
+  },
+  {
+    "epoch": 1793575251.853,
+    "text": "2026-11-01 23:20:51.853 UTC [1] LOG:  background worker \"parallel worker\" (PID 1174) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run3.log",
+        "line": 453
+      }
+    ]
+  },
+  {
+    "epoch": 1793575332.655,
+    "text": "2026-11-01 23:22:12.655 UTC [1] LOG:  client backend (PID 1245) was terminated by signal 9: Killed",
+    "sources": [
+      {
+        "file": "results/logs/oom_postgresql_PROFILE_C_SEVERE_Q1_c50_run3.log",
+        "line": 477
+      }
+    ]
+  }
+]

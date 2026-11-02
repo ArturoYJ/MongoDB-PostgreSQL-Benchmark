@@ -1,0 +1,25 @@
+{
+  "total_attempts": 198,
+  "latest_attempts_count": 162,
+  "by_classification": {
+    "full_measurement_performance_candidate": 108,
+    "timeout_incomplete_measurement": 39,
+    "forced_worker_termination_partial_results": 3,
+    "warmup_sigkill_failure_oom_consistent": 18,
+    "full_measurement_persistent_oom_label_suspected": 30
+  },
+  "acceptance_counts": {
+    "candidate": 138,
+    "accepted_for_performance": 138,
+    "failure_stability": 60,
+    "incomplete": 60,
+    "telemetry_insufficient": 0
+  },
+  "latest_acceptance_counts": {
+    "candidate": 138,
+    "accepted_for_performance": 138,
+    "failure_stability": 24,
+    "incomplete": 24,
+    "telemetry_insufficient": 0
+  }
+}

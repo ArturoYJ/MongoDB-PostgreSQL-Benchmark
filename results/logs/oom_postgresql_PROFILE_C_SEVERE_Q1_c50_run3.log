@@ -1,0 +1,502 @@
+
+--- STDERR ---
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:50:46.311 UTC [484] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:50:46.311 UTC [484] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:54:25.812 UTC [518] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:54:25.812 UTC [518] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:54:25.815 UTC [519] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:54:25.815 UTC [519] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:54:25.822 UTC [516] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:54:25.822 UTC [516] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:54:25.823 UTC [517] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:54:25.823 UTC [517] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:54:25.827 UTC [520] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:54:25.827 UTC [520] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:54:25.933 UTC [521] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:54:25.933 UTC [521] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:54:26.015 UTC [522] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:54:26.015 UTC [522] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:58:05.305 UTC [549] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:58:05.305 UTC [549] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:58:05.308 UTC [551] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:58:05.308 UTC [551] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:58:05.316 UTC [550] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:58:05.316 UTC [550] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:58:05.416 UTC [557] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:58:05.416 UTC [557] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:58:05.416 UTC [558] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:58:05.416 UTC [558] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 22:58:05.420 UTC [554] ERROR:  canceling statement due to statement timeout
+2026-11-01 22:58:05.420 UTC [554] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:01:52.521 UTC [583] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:01:52.521 UTC [583] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:01:52.552 UTC [579] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:01:52.552 UTC [579] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:01:52.706 UTC [584] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:01:52.706 UTC [584] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:01:52.708 UTC [587] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:01:52.708 UTC [587] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:01:52.817 UTC [592] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:01:52.817 UTC [592] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:01:52.824 UTC [594] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:01:52.824 UTC [594] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:05:39.808 UTC [615] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:05:39.808 UTC [615] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:05:39.814 UTC [613] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:05:39.814 UTC [613] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:05:39.817 UTC [617] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:05:39.817 UTC [617] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:05:39.914 UTC [618] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:05:39.914 UTC [618] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:05:40.010 UTC [624] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:05:40.010 UTC [624] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:05:40.012 UTC [623] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:05:40.012 UTC [623] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:09:27.657 UTC [647] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:09:27.657 UTC [647] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:09:27.761 UTC [648] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:09:27.761 UTC [648] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:09:27.765 UTC [649] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:09:27.765 UTC [649] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:09:27.767 UTC [652] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:09:27.767 UTC [652] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:09:27.767 UTC [651] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:09:27.767 UTC [651] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:09:27.773 UTC [650] ERROR:  canceling statement due to statement timeout
+2026-11-01 23:09:27.773 UTC [650] STATEMENT:  SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:11:26.270 UTC [1] LOG:  io worker (PID 27) was terminated by signal 9: Killed
+2026-11-01 23:11:26.270 UTC [1] LOG:  terminating any other active server processes
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+2026-11-01 23:11:26.658 UTC [1] LOG:  all server processes terminated; reinitializing
+2026-11-01 23:11:26.703 UTC [736] LOG:  database system was interrupted; last known up at 2026-11-01 22:20:31 UTC
+2026-11-01 23:11:26.828 UTC [736] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-01 23:11:26.834 UTC [736] LOG:  redo starts at 0/90632418
+2026-11-01 23:11:26.834 UTC [736] LOG:  invalid record length at 0/90632520: expected at least 24, got 0
+2026-11-01 23:11:26.834 UTC [736] LOG:  redo done at 0/906324E8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-01 23:11:26.839 UTC [737] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-01 23:11:26.850 UTC [737] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.001 s, total=0.013 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/90632520, redo lsn=0/90632520
+2026-11-01 23:11:26.871 UTC [1] LOG:  database system is ready to accept connections
+2026-11-01 23:12:48.257 UTC [1] LOG:  client backend (PID 754) was terminated by signal 9: Killed
+2026-11-01 23:12:48.257 UTC [1] DETAIL:  Failed process was running: SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:12:48.257 UTC [1] LOG:  terminating any other active server processes
+2026-11-01 23:12:48.456 UTC [1] LOG:  all server processes terminated; reinitializing
+2026-11-01 23:12:48.477 UTC [807] LOG:  database system was interrupted; last known up at 2026-11-01 23:11:26 UTC
+2026-11-01 23:12:48.597 UTC [807] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-01 23:12:48.600 UTC [807] LOG:  redo starts at 0/90632598
+2026-11-01 23:12:48.600 UTC [807] LOG:  invalid record length at 0/906325D0: expected at least 24, got 0
+2026-11-01 23:12:48.600 UTC [807] LOG:  redo done at 0/90632598 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-01 23:12:48.604 UTC [808] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-01 23:12:48.610 UTC [808] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.001 s, total=0.007 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/906325D0, redo lsn=0/906325D0
+2026-11-01 23:12:48.628 UTC [1] LOG:  database system is ready to accept connections
+2026-11-01 23:14:09.074 UTC [1] LOG:  client backend (PID 847) was terminated by signal 9: Killed
+2026-11-01 23:14:09.074 UTC [1] DETAIL:  Failed process was running: SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:14:09.074 UTC [1] LOG:  terminating any other active server processes
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+2026-11-01 23:14:09.555 UTC [1] LOG:  all server processes terminated; reinitializing
+2026-11-01 23:14:09.591 UTC [878] LOG:  database system was interrupted; last known up at 2026-11-01 23:12:48 UTC
+2026-11-01 23:14:09.674 UTC [878] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-01 23:14:09.679 UTC [878] LOG:  redo starts at 0/90632648
+2026-11-01 23:14:09.679 UTC [878] LOG:  invalid record length at 0/90632680: expected at least 24, got 0
+2026-11-01 23:14:09.679 UTC [878] LOG:  redo done at 0/90632648 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-01 23:14:09.685 UTC [879] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-01 23:14:09.694 UTC [879] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.002 s, total=0.012 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/90632680, redo lsn=0/90632680
+2026-11-01 23:14:09.713 UTC [1] LOG:  database system is ready to accept connections
+2026-11-01 23:15:30.161 UTC [1] LOG:  client backend (PID 891) was terminated by signal 9: Killed
+2026-11-01 23:15:30.161 UTC [1] DETAIL:  Failed process was running: SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:15:30.163 UTC [1] LOG:  terminating any other active server processes
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+2026-11-01 23:15:30.456 UTC [1] LOG:  all server processes terminated; reinitializing
+2026-11-01 23:15:30.491 UTC [949] LOG:  database system was interrupted; last known up at 2026-11-01 23:14:09 UTC
+2026-11-01 23:15:30.570 UTC [949] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-01 23:15:30.574 UTC [949] LOG:  redo starts at 0/906326F8
+2026-11-01 23:15:30.574 UTC [949] LOG:  invalid record length at 0/90632730: expected at least 24, got 0
+2026-11-01 23:15:30.574 UTC [949] LOG:  redo done at 0/906326F8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-01 23:15:30.577 UTC [950] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-01 23:15:30.583 UTC [950] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.006 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/90632730, redo lsn=0/90632730
+2026-11-01 23:15:30.597 UTC [1] LOG:  database system is ready to accept connections
+2026-11-01 23:16:49.962 UTC [1] LOG:  client backend (PID 960) was terminated by signal 9: Killed
+2026-11-01 23:16:49.962 UTC [1] DETAIL:  Failed process was running: SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:16:49.962 UTC [1] LOG:  terminating any other active server processes
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+2026-11-01 23:16:50.355 UTC [1] LOG:  all server processes terminated; reinitializing
+2026-11-01 23:16:50.440 UTC [1020] LOG:  database system was interrupted; last known up at 2026-11-01 23:15:30 UTC
+2026-11-01 23:16:50.544 UTC [1020] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-01 23:16:50.546 UTC [1020] LOG:  redo starts at 0/906327A8
+2026-11-01 23:16:50.546 UTC [1020] LOG:  invalid record length at 0/906327E0: expected at least 24, got 0
+2026-11-01 23:16:50.546 UTC [1020] LOG:  redo done at 0/906327A8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-01 23:16:50.548 UTC [1021] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-01 23:16:50.551 UTC [1021] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.004 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/906327E0, redo lsn=0/906327E0
+2026-11-01 23:16:50.559 UTC [1] LOG:  database system is ready to accept connections
+2026-11-01 23:18:11.068 UTC [1] LOG:  client backend (PID 1031) was terminated by signal 9: Killed
+2026-11-01 23:18:11.068 UTC [1] DETAIL:  Failed process was running: SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:18:11.068 UTC [1] LOG:  terminating any other active server processes
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+2026-11-01 23:18:11.460 UTC [1] LOG:  all server processes terminated; reinitializing
+2026-11-01 23:18:11.481 UTC [1091] LOG:  database system was interrupted; last known up at 2026-11-01 23:16:50 UTC
+2026-11-01 23:18:11.612 UTC [1091] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-01 23:18:11.615 UTC [1091] LOG:  redo starts at 0/90632858
+2026-11-01 23:18:11.615 UTC [1091] LOG:  invalid record length at 0/90632890: expected at least 24, got 0
+2026-11-01 23:18:11.615 UTC [1091] LOG:  redo done at 0/90632858 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-01 23:18:11.617 UTC [1092] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-01 23:18:11.620 UTC [1092] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.004 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/90632890, redo lsn=0/90632890
+2026-11-01 23:18:11.627 UTC [1] LOG:  database system is ready to accept connections
+2026-11-01 23:19:30.948 UTC [1] LOG:  client backend (PID 1102) was terminated by signal 9: Killed
+2026-11-01 23:19:30.948 UTC [1] DETAIL:  Failed process was running: SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:19:30.948 UTC [1] LOG:  terminating any other active server processes
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+2026-11-01 23:19:31.246 UTC [1] LOG:  all server processes terminated; reinitializing
+2026-11-01 23:19:31.268 UTC [1162] LOG:  database system was interrupted; last known up at 2026-11-01 23:18:11 UTC
+2026-11-01 23:19:31.398 UTC [1162] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-01 23:19:31.403 UTC [1162] LOG:  redo starts at 0/90632908
+2026-11-01 23:19:31.403 UTC [1162] LOG:  invalid record length at 0/90632940: expected at least 24, got 0
+2026-11-01 23:19:31.403 UTC [1162] LOG:  redo done at 0/90632908 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-01 23:19:31.405 UTC [1163] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-01 23:19:31.408 UTC [1163] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.004 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/90632940, redo lsn=0/90632940
+2026-11-01 23:19:31.416 UTC [1] LOG:  database system is ready to accept connections
+2026-11-01 23:20:51.853 UTC [1] LOG:  background worker "parallel worker" (PID 1174) was terminated by signal 9: Killed
+2026-11-01 23:20:51.853 UTC [1] DETAIL:  Failed process was running: SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:20:51.853 UTC [1] LOG:  terminating any other active server processes
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+2026-11-01 23:20:52.048 UTC [1] LOG:  all server processes terminated; reinitializing
+2026-11-01 23:20:52.075 UTC [1233] LOG:  database system was interrupted; last known up at 2026-11-01 23:19:31 UTC
+2026-11-01 23:20:52.325 UTC [1233] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-01 23:20:52.328 UTC [1233] LOG:  redo starts at 0/906329B8
+2026-11-01 23:20:52.328 UTC [1233] LOG:  invalid record length at 0/906329F0: expected at least 24, got 0
+2026-11-01 23:20:52.328 UTC [1233] LOG:  redo done at 0/906329B8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-01 23:20:52.330 UTC [1234] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-01 23:20:52.333 UTC [1234] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.004 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/906329F0, redo lsn=0/906329F0
+2026-11-01 23:20:52.341 UTC [1] LOG:  database system is ready to accept connections
+2026-11-01 23:22:12.655 UTC [1] LOG:  client backend (PID 1245) was terminated by signal 9: Killed
+2026-11-01 23:22:12.655 UTC [1] DETAIL:  Failed process was running: SELECT data->'customer'->'geo'->>'country' AS country,
+	       item->>'category' AS category,
+	       SUM((item->>'qty')::numeric * (item->>'price')::numeric) AS total_revenue,
+	       AVG((item->>'qty')::numeric * (item->>'price')::numeric) AS avg_revenue,
+	       COUNT(*) AS count
+	FROM orders, jsonb_array_elements(data->'items') AS item
+	WHERE (item->>'price')::numeric > 50
+	GROUP BY 1, 2;
+2026-11-01 23:22:12.655 UTC [1] LOG:  terminating any other active server processes
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+Fatal glibc error: malloc.c:2601 (sysmalloc): assertion failed: (old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)
+2026-11-01 23:22:12.949 UTC [1] LOG:  all server processes terminated; reinitializing
+2026-11-01 23:22:12.987 UTC [1305] LOG:  database system was interrupted; last known up at 2026-11-01 23:20:52 UTC
+2026-11-01 23:22:13.070 UTC [1305] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-01 23:22:13.074 UTC [1305] LOG:  redo starts at 0/90632A68
+2026-11-01 23:22:13.074 UTC [1305] LOG:  invalid record length at 0/90632AA0: expected at least 24, got 0
+2026-11-01 23:22:13.074 UTC [1305] LOG:  redo done at 0/90632A68 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-01 23:22:13.077 UTC [1306] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-01 23:22:13.089 UTC [1306] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.001 s, total=0.014 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/90632AA0, redo lsn=0/90632AA0
+2026-11-01 23:22:13.102 UTC [1] LOG:  database system is ready to accept connections

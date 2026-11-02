@@ -1,0 +1,858 @@
+[
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$unwind": "$items"
+        },
+        {
+          "$match": {
+            "items.price": {
+              "$gt": 50
+            }
+          }
+        },
+        {
+          "$group": {
+            "_id": {
+              "country": "$customer.geo.country",
+              "category": "$items.category"
+            },
+            "total_revenue": {
+              "$sum": {
+                "$multiply": [
+                  "$items.qty",
+                  "$items.price"
+                ]
+              }
+            },
+            "avg_revenue": {
+              "$avg": {
+                "$multiply": [
+                  "$items.qty",
+                  "$items.price"
+                ]
+              }
+            },
+            "count": {
+              "$sum": 1
+            }
+          }
+        }
+      ],
+      "allowDiskUse": false,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:817a251249874098be3b3a31ed8fef00:m:0:0",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xdc\\x991\\xa3\\xe5;E\\xf8\\x83+\\x87\\xb8\\x18\\x92Jz'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 24579,
+    "keysExamined": 0,
+    "docsExamined": 500000,
+    "peakTrackedMemBytes": 43008,
+    "cursorExhausted": true,
+    "numYield": 81,
+    "nreturned": 64,
+    "planCacheShapeHash": "51018CFF",
+    "queryHash": "51018CFF",
+    "planCacheKey": "7CF6F44B",
+    "queryShapeHash": "8ADAB069AF96E4823ADBEDC446702FC2C9CFA1C7D328974E56074BD564DC11C4",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 156
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 408
+      }
+    },
+    "responseLength": 7239,
+    "protocol": "op_msg",
+    "cpuNanos": 6507375,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 156,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 2126,
+    "micros": 2126639,
+    "planSummary": "COLLSCAN",
+    "planningTimeMicros": 1253,
+    "deadline": "2026-11-01 04:47:08.814000",
+    "ts": "2026-11-01 04:42:10.941000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$unwind": "$items"
+        },
+        {
+          "$match": {
+            "items.price": {
+              "$gt": 50
+            }
+          }
+        },
+        {
+          "$group": {
+            "_id": {
+              "country": "$customer.geo.country",
+              "category": "$items.category"
+            },
+            "total_revenue": {
+              "$sum": {
+                "$multiply": [
+                  "$items.qty",
+                  "$items.price"
+                ]
+              }
+            },
+            "avg_revenue": {
+              "$avg": {
+                "$multiply": [
+                  "$items.qty",
+                  "$items.price"
+                ]
+              }
+            },
+            "count": {
+              "$sum": 1
+            }
+          }
+        }
+      ],
+      "allowDiskUse": false,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:817a251249874098be3b3a31ed8fef00:m:0:1",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xdc\\x991\\xa3\\xe5;E\\xf8\\x83+\\x87\\xb8\\x18\\x92Jz'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 24580,
+    "keysExamined": 0,
+    "docsExamined": 500000,
+    "peakTrackedMemBytes": 43008,
+    "cursorExhausted": true,
+    "numYield": 87,
+    "nreturned": 64,
+    "planCacheShapeHash": "51018CFF",
+    "queryHash": "51018CFF",
+    "planCacheKey": "7CF6F44B",
+    "queryShapeHash": "8ADAB069AF96E4823ADBEDC446702FC2C9CFA1C7D328974E56074BD564DC11C4",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 162
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 413
+      }
+    },
+    "responseLength": 7239,
+    "protocol": "op_msg",
+    "cpuNanos": 2083459,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 162,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 2249,
+    "micros": 2249801,
+    "planSummary": "COLLSCAN",
+    "planningTimeMicros": 531,
+    "deadline": "2026-11-01 04:47:10.947000",
+    "ts": "2026-11-01 04:42:13.198000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$unwind": "$items"
+        },
+        {
+          "$match": {
+            "items.price": {
+              "$gt": 50
+            }
+          }
+        },
+        {
+          "$group": {
+            "_id": {
+              "country": "$customer.geo.country",
+              "category": "$items.category"
+            },
+            "total_revenue": {
+              "$sum": {
+                "$multiply": [
+                  "$items.qty",
+                  "$items.price"
+                ]
+              }
+            },
+            "avg_revenue": {
+              "$avg": {
+                "$multiply": [
+                  "$items.qty",
+                  "$items.price"
+                ]
+              }
+            },
+            "count": {
+              "$sum": 1
+            }
+          }
+        }
+      ],
+      "allowDiskUse": false,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:817a251249874098be3b3a31ed8fef00:m:0:2",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xdc\\x991\\xa3\\xe5;E\\xf8\\x83+\\x87\\xb8\\x18\\x92Jz'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 24581,
+    "keysExamined": 0,
+    "docsExamined": 500000,
+    "peakTrackedMemBytes": 43008,
+    "cursorExhausted": true,
+    "numYield": 80,
+    "nreturned": 64,
+    "planCacheShapeHash": "51018CFF",
+    "queryHash": "51018CFF",
+    "planCacheKey": "7CF6F44B",
+    "queryShapeHash": "8ADAB069AF96E4823ADBEDC446702FC2C9CFA1C7D328974E56074BD564DC11C4",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 155
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 485
+      }
+    },
+    "responseLength": 7239,
+    "protocol": "op_msg",
+    "cpuNanos": 3719207,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 155,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 2502,
+    "micros": 2502950,
+    "planSummary": "COLLSCAN",
+    "planningTimeMicros": 1022,
+    "deadline": "2026-11-01 04:47:13.203000",
+    "ts": "2026-11-01 04:42:15.709000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$unwind": "$items"
+        },
+        {
+          "$match": {
+            "items.price": {
+              "$gt": 50
+            }
+          }
+        },
+        {
+          "$group": {
+            "_id": {
+              "country": "$customer.geo.country",
+              "category": "$items.category"
+            },
+            "total_revenue": {
+              "$sum": {
+                "$multiply": [
+                  "$items.qty",
+                  "$items.price"
+                ]
+              }
+            },
+            "avg_revenue": {
+              "$avg": {
+                "$multiply": [
+                  "$items.qty",
+                  "$items.price"
+                ]
+              }
+            },
+            "count": {
+              "$sum": 1
+            }
+          }
+        }
+      ],
+      "allowDiskUse": false,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:817a251249874098be3b3a31ed8fef00:m:0:3",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xdc\\x991\\xa3\\xe5;E\\xf8\\x83+\\x87\\xb8\\x18\\x92Jz'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 24582,
+    "keysExamined": 0,
+    "docsExamined": 500000,
+    "peakTrackedMemBytes": 43008,
+    "cursorExhausted": true,
+    "numYield": 75,
+    "nreturned": 64,
+    "planCacheShapeHash": "51018CFF",
+    "queryHash": "51018CFF",
+    "planCacheKey": "7CF6F44B",
+    "queryShapeHash": "8ADAB069AF96E4823ADBEDC446702FC2C9CFA1C7D328974E56074BD564DC11C4",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 150
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 340
+      }
+    },
+    "responseLength": 7239,
+    "protocol": "op_msg",
+    "cpuNanos": 2129333,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 150,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 2019,
+    "micros": 2019846,
+    "planSummary": "COLLSCAN",
+    "planningTimeMicros": 489,
+    "deadline": "2026-11-01 04:47:15.739000",
+    "ts": "2026-11-01 04:42:17.762000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$unwind": "$items"
+        },
+        {
+          "$match": {
+            "items.price": {
+              "$gt": 50
+            }
+          }
+        },
+        {
+          "$group": {
+            "_id": {
+              "country": "$customer.geo.country",
+              "category": "$items.category"
+            },
+            "total_revenue": {
+              "$sum": {
+                "$multiply": [
+                  "$items.qty",
+                  "$items.price"
+                ]
+              }
+            },
+            "avg_revenue": {
+              "$avg": {
+                "$multiply": [
+                  "$items.qty",
+                  "$items.price"
+                ]
+              }
+            },
+            "count": {
+              "$sum": 1
+            }
+          }
+        }
+      ],
+      "allowDiskUse": false,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:817a251249874098be3b3a31ed8fef00:m:0:4",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xdc\\x991\\xa3\\xe5;E\\xf8\\x83+\\x87\\xb8\\x18\\x92Jz'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 24583,
+    "keysExamined": 0,
+    "docsExamined": 500000,
+    "peakTrackedMemBytes": 43008,
+    "cursorExhausted": true,
+    "numYield": 64,
+    "nreturned": 64,
+    "planCacheShapeHash": "51018CFF",
+    "queryHash": "51018CFF",
+    "planCacheKey": "7CF6F44B",
+    "queryShapeHash": "8ADAB069AF96E4823ADBEDC446702FC2C9CFA1C7D328974E56074BD564DC11C4",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 139
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 258
+      }
+    },
+    "responseLength": 7239,
+    "protocol": "op_msg",
+    "cpuNanos": 2268291,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 139,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 1500,
+    "micros": 1500940,
+    "planSummary": "COLLSCAN",
+    "planningTimeMicros": 536,
+    "deadline": "2026-11-01 04:47:17.763000",
+    "ts": "2026-11-01 04:42:19.268000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$unwind": "$items"
+        },
+        {
+          "$match": {
+            "items.price": {
+              "$gt": 50
+            }
+          }
+        },
+        {
+          "$group": {
+            "_id": {
+              "country": "$customer.geo.country",
+              "category": "$items.category"
+            },
+            "total_revenue": {
+              "$sum": {
+                "$multiply": [
+                  "$items.qty",
+                  "$items.price"
+                ]
+              }
+            },
+            "avg_revenue": {
+              "$avg": {
+                "$multiply": [
+                  "$items.qty",
+                  "$items.price"
+                ]
+              }
+            },
+            "count": {
+              "$sum": 1
+            }
+          }
+        }
+      ],
+      "allowDiskUse": false,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:817a251249874098be3b3a31ed8fef00:m:0:5",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xdc\\x991\\xa3\\xe5;E\\xf8\\x83+\\x87\\xb8\\x18\\x92Jz'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 24584,
+    "keysExamined": 0,
+    "docsExamined": 500000,
+    "peakTrackedMemBytes": 43008,
+    "cursorExhausted": true,
+    "numYield": 64,
+    "nreturned": 64,
+    "planCacheShapeHash": "51018CFF",
+    "queryHash": "51018CFF",
+    "planCacheKey": "7CF6F44B",
+    "queryShapeHash": "8ADAB069AF96E4823ADBEDC446702FC2C9CFA1C7D328974E56074BD564DC11C4",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 139
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 257
+      }
+    },
+    "responseLength": 7239,
+    "protocol": "op_msg",
+    "cpuNanos": 828626,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 139,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 1489,
+    "micros": 1489258,
+    "planSummary": "COLLSCAN",
+    "planningTimeMicros": 89,
+    "deadline": "2026-11-01 04:47:19.268000",
+    "ts": "2026-11-01 04:42:20.760000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$unwind": "$items"
+        },
+        {
+          "$match": {
+            "items.price": {
+              "$gt": 50
+            }
+          }
+        },
+        {
+          "$group": {
+            "_id": {
+              "country": "$customer.geo.country",
+              "category": "$items.category"
+            },
+            "total_revenue": {
+              "$sum": {
+                "$multiply": [
+                  "$items.qty",
+                  "$items.price"
+                ]
+              }
+            },
+            "avg_revenue": {
+              "$avg": {
+                "$multiply": [
+                  "$items.qty",
+                  "$items.price"
+                ]
+              }
+            },
+            "count": {
+              "$sum": 1
+            }
+          }
+        }
+      ],
+      "allowDiskUse": false,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:817a251249874098be3b3a31ed8fef00:m:0:6",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xdc\\x991\\xa3\\xe5;E\\xf8\\x83+\\x87\\xb8\\x18\\x92Jz'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 24585,
+    "keysExamined": 0,
+    "docsExamined": 500000,
+    "peakTrackedMemBytes": 43008,
+    "cursorExhausted": true,
+    "numYield": 64,
+    "nreturned": 64,
+    "planCacheShapeHash": "51018CFF",
+    "queryHash": "51018CFF",
+    "planCacheKey": "7CF6F44B",
+    "queryShapeHash": "8ADAB069AF96E4823ADBEDC446702FC2C9CFA1C7D328974E56074BD564DC11C4",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 139
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 177
+      }
+    },
+    "responseLength": 7239,
+    "protocol": "op_msg",
+    "cpuNanos": 1168167,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 139,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 1556,
+    "micros": 1556352,
+    "planSummary": "COLLSCAN",
+    "planningTimeMicros": 155,
+    "deadline": "2026-11-01 04:47:20.760000",
+    "ts": "2026-11-01 04:42:22.319000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$unwind": "$items"
+        },
+        {
+          "$match": {
+            "items.price": {
+              "$gt": 50
+            }
+          }
+        },
+        {
+          "$group": {
+            "_id": {
+              "country": "$customer.geo.country",
+              "category": "$items.category"
+            },
+            "total_revenue": {
+              "$sum": {
+                "$multiply": [
+                  "$items.qty",
+                  "$items.price"
+                ]
+              }
+            },
+            "avg_revenue": {
+              "$avg": {
+                "$multiply": [
+                  "$items.qty",
+                  "$items.price"
+                ]
+              }
+            },
+            "count": {
+              "$sum": 1
+            }
+          }
+        }
+      ],
+      "allowDiskUse": false,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:817a251249874098be3b3a31ed8fef00:m:0:7",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xdc\\x991\\xa3\\xe5;E\\xf8\\x83+\\x87\\xb8\\x18\\x92Jz'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 24586,
+    "keysExamined": 0,
+    "docsExamined": 500000,
+    "peakTrackedMemBytes": 43008,
+    "cursorExhausted": true,
+    "numYield": 64,
+    "nreturned": 64,
+    "planCacheShapeHash": "51018CFF",
+    "queryHash": "51018CFF",
+    "planCacheKey": "7CF6F44B",
+    "queryShapeHash": "8ADAB069AF96E4823ADBEDC446702FC2C9CFA1C7D328974E56074BD564DC11C4",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 139
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 187
+      }
+    },
+    "responseLength": 7239,
+    "protocol": "op_msg",
+    "cpuNanos": 3139917,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 139,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 1481,
+    "micros": 1481496,
+    "planSummary": "COLLSCAN",
+    "planningTimeMicros": 664,
+    "deadline": "2026-11-01 04:47:22.323000",
+    "ts": "2026-11-01 04:42:23.809000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  }
+]
