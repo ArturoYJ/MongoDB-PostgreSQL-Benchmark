@@ -1,0 +1,13 @@
+{
+  "spill": false,
+  "scope": "operations completed in the fixed measurement window",
+  "operations": [
+    "bdaas:817a251249874098be3b3a31ed8fef00:m:0:0",
+    "bdaas:817a251249874098be3b3a31ed8fef00:m:0:1",
+    "bdaas:817a251249874098be3b3a31ed8fef00:m:0:2",
+    "bdaas:817a251249874098be3b3a31ed8fef00:m:0:3",
+    "bdaas:817a251249874098be3b3a31ed8fef00:m:0:4",
+    "bdaas:817a251249874098be3b3a31ed8fef00:m:0:5",
+    "bdaas:817a251249874098be3b3a31ed8fef00:m:0:6"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "args": {
+    "engine": "mongodb",
+    "profile": "PROFILE_A_BASELINE",
+    "query": "Q2",
+    "concurrency": 1,
+    "run_number": 1,
+    "variant": "allowDiskUse_true",
+    "warmup": 5.0,
+    "duration": 15.0,
+    "cooldown": 3.0,
+    "query_timeout": 300,
+    "output_csv": "results/pilot_integrity_v1.csv",
+    "prometheus_url": "http://127.0.0.1:9090",
+    "pg_port": 5434
+  },
+  "contract": "68df12911b25168a12a04f06e3f5bf48f821fa708e5dcf9cc0826dd4a06d61e4",
+  "attempt": "b3eb496630d944eb84eb68569d85e2ce",
+  "key": "mongodb_PROFILE_A_BASELINE_Q2_allowDiskUse_true_c1_r1",
+  "valid": true,
+  "environment": {
+    "container_id": "fcf0563f23413d7bcf540f364fcfc2447679ed633e33e2837796c0f3624367b7",
+    "image": "sha256:452bdaf2127b8ff851e31410a267809b9829eded219979f2210e7c7efb85a058",
+    "architecture": "arm64",
+    "profile": "PROFILE_A_BASELINE",
+    "cgroups": "cpu.max\n400000 100000\nmemory.max\n4294967296\nmemory.swap.max\n0\nmemory.events\nlow 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n"
+  },
+  "oom_events": [],
+  "window": {
+    "monotonic": [
+      7.285258708,
+      22.285258708
+    ],
+    "epoch": [
+      1793508198.1836388,
+      1793508213.1836388
+    ]
+  },
+  "completed": 35,
+  "tail_completions": 1,
+  "worker_errors": []
+}

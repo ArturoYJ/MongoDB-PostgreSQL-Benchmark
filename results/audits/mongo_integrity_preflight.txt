@@ -1,0 +1,15 @@
+/Users/arturoyj/Universidad Politecnica/7 cuatrimestre/BDaaS/U2/playbook/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/Users/arturoyj/Universidad Politecnica/7 cuatrimestre/BDaaS/U2/playbook/benchmark_runner/preflight.py", line 291, in <module>
+    main()
+  File "/Users/arturoyj/Universidad Politecnica/7 cuatrimestre/BDaaS/U2/playbook/benchmark_runner/preflight.py", line 277, in main
+    check_prometheus(args.prometheus_url, f"benchmark_{args.engine}")
+  File "/Users/arturoyj/Universidad Politecnica/7 cuatrimestre/BDaaS/U2/playbook/benchmark_runner/preflight.py", line 114, in check_prometheus
+    raise RuntimeError(f"Prometheus did not scrape RSS and CFS metrics for '{container_name}' within 30 seconds.")
+RuntimeError: Prometheus did not scrape RSS and CFS metrics for 'benchmark_mongodb' within 30 seconds.
+Source dataset verified: 500,000 unique order IDs and full-document hashes.

@@ -1,0 +1,3386 @@
+[
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:0",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104458,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 44,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 47
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 164
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 20909917,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 47,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 658,
+    "micros": 658023,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 1498,
+    "deadline": "2026-11-01 04:48:19.883000",
+    "ts": "2026-11-01 04:43:20.542000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:1",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104459,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 22,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 25
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 93
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 17147875,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 25,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 342,
+    "micros": 342124,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 209,
+    "deadline": "2026-11-01 04:48:20.542000",
+    "ts": "2026-11-01 04:43:20.888000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:2",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104460,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 22,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 25
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 69
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 16100458,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 25,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 340,
+    "micros": 340164,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 131,
+    "deadline": "2026-11-01 04:48:20.895000",
+    "ts": "2026-11-01 04:43:21.241000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:3",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104461,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 25,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 28
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 67
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 16192625,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 28,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 352,
+    "micros": 352341,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 102,
+    "deadline": "2026-11-01 04:48:21.247000",
+    "ts": "2026-11-01 04:43:21.600000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:4",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104462,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 24,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 27
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 59
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 15958666,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 27,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 332,
+    "micros": 332447,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 98,
+    "deadline": "2026-11-01 04:48:21.600000",
+    "ts": "2026-11-01 04:43:21.938000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:5",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104463,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 24,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 27
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 70
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 21906166,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 27,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 342,
+    "micros": 342509,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 100,
+    "deadline": "2026-11-01 04:48:21.943000",
+    "ts": "2026-11-01 04:43:22.286000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:6",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104464,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 21,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 24
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 119
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 22281042,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 24,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 341,
+    "micros": 341620,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 141,
+    "deadline": "2026-11-01 04:48:22.312000",
+    "ts": "2026-11-01 04:43:22.655000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:7",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104465,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 23,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 26
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 60
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 22379124,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 26,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 365,
+    "micros": 365998,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 118,
+    "deadline": "2026-11-01 04:48:22.655000",
+    "ts": "2026-11-01 04:43:23.026000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:8",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104466,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 26,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 29
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 73
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 17083667,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 29,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 393,
+    "micros": 393760,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 301,
+    "deadline": "2026-11-01 04:48:23.029000",
+    "ts": "2026-11-01 04:43:23.427000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:9",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104467,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 26,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 29
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 67
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 11476833,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 29,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 340,
+    "micros": 340643,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 148,
+    "deadline": "2026-11-01 04:48:23.427000",
+    "ts": "2026-11-01 04:43:23.771000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:10",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104468,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 27,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 30
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 78
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 14578958,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 30,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 394,
+    "micros": 394001,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 125,
+    "deadline": "2026-11-01 04:48:23.775000",
+    "ts": "2026-11-01 04:43:24.171000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:11",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104469,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 30,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 33
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 73
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 12910125,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 33,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 453,
+    "micros": 453475,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 98,
+    "deadline": "2026-11-01 04:48:24.171000",
+    "ts": "2026-11-01 04:43:24.628000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:12",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104470,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 32,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 35
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 110
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 15323500,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 35,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 429,
+    "micros": 429327,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 102,
+    "deadline": "2026-11-01 04:48:24.628000",
+    "ts": "2026-11-01 04:43:25.060000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:13",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104471,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 28,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 31
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 95
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 21377542,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 31,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 417,
+    "micros": 417391,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 169,
+    "deadline": "2026-11-01 04:48:25.065000",
+    "ts": "2026-11-01 04:43:25.486000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:14",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104472,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 23,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 26
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 65
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 18313833,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 26,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 343,
+    "micros": 343429,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 135,
+    "deadline": "2026-11-01 04:48:25.514000",
+    "ts": "2026-11-01 04:43:25.863000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:15",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104473,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 25,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 28
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 142
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 10883917,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 28,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 364,
+    "micros": 364904,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 155,
+    "deadline": "2026-11-01 04:48:25.864000",
+    "ts": "2026-11-01 04:43:26.238000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:16",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104474,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 27,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 30
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 73
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 13566750,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 30,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 375,
+    "micros": 375183,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 380,
+    "deadline": "2026-11-01 04:48:26.243000",
+    "ts": "2026-11-01 04:43:26.627000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:17",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104475,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 22,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 25
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 63
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 13589541,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 25,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 333,
+    "micros": 333541,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 98,
+    "deadline": "2026-11-01 04:48:26.632000",
+    "ts": "2026-11-01 04:43:26.966000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:18",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104476,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 24,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 27
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 62
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 11859958,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 27,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 342,
+    "micros": 342604,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 96,
+    "deadline": "2026-11-01 04:48:26.972000",
+    "ts": "2026-11-01 04:43:27.315000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:19",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104477,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 23,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 26
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 49
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 11844500,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 26,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 343,
+    "micros": 343103,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 95,
+    "deadline": "2026-11-01 04:48:27.315000",
+    "ts": "2026-11-01 04:43:27.661000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:20",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104478,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 25,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 28
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 53
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 13314208,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 28,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 338,
+    "micros": 338032,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 98,
+    "deadline": "2026-11-01 04:48:27.661000",
+    "ts": "2026-11-01 04:43:28.005000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:21",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104479,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 24,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 27
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 53
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 16199833,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 27,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 341,
+    "micros": 341114,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 317,
+    "deadline": "2026-11-01 04:48:28.010000",
+    "ts": "2026-11-01 04:43:28.352000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:22",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104480,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 26,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 29
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 60
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 16971125,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 29,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 361,
+    "micros": 361985,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 99,
+    "deadline": "2026-11-01 04:48:28.370000",
+    "ts": "2026-11-01 04:43:28.737000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:23",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104481,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 26,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 29
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 54
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 12564000,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 29,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 403,
+    "micros": 403691,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 110,
+    "deadline": "2026-11-01 04:48:28.737000",
+    "ts": "2026-11-01 04:43:29.146000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:24",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104482,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 33,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 36
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 164
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 19937458,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 36,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 497,
+    "micros": 497055,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 112,
+    "deadline": "2026-11-01 04:48:29.152000",
+    "ts": "2026-11-01 04:43:29.650000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:25",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104483,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 27,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 30
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 81
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 13694375,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 30,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 374,
+    "micros": 374308,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 165,
+    "deadline": "2026-11-01 04:48:29.653000",
+    "ts": "2026-11-01 04:43:30.033000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:26",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104484,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 65,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 68
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 722
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 22769250,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 68,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 1010,
+    "micros": 1010210,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 127,
+    "deadline": "2026-11-01 04:48:30.033000",
+    "ts": "2026-11-01 04:43:31.048000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:27",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104485,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 40,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 43
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 167
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 12109208,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 43,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 592,
+    "micros": 592424,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 1727,
+    "deadline": "2026-11-01 04:48:31.055000",
+    "ts": "2026-11-01 04:43:31.652000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:28",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104486,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 24,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 27
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 194
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 20011417,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 27,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 367,
+    "micros": 367979,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 169,
+    "deadline": "2026-11-01 04:48:31.663000",
+    "ts": "2026-11-01 04:43:32.031000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:29",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104487,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 27,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 30
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 92
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 11482375,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 30,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 392,
+    "micros": 392372,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 446,
+    "deadline": "2026-11-01 04:48:32.045000",
+    "ts": "2026-11-01 04:43:32.437000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:30",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104488,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 28,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 31
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 75
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 14856500,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 31,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 392,
+    "micros": 392605,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 150,
+    "deadline": "2026-11-01 04:48:32.470000",
+    "ts": "2026-11-01 04:43:32.868000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:31",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104489,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 31,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 34
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 139
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 15533583,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 34,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 478,
+    "micros": 478490,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 104,
+    "deadline": "2026-11-01 04:48:32.868000",
+    "ts": "2026-11-01 04:43:33.350000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:32",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104490,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 24,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 27
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 118
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 13927834,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 27,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 407,
+    "micros": 407708,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 141,
+    "deadline": "2026-11-01 04:48:33.350000",
+    "ts": "2026-11-01 04:43:33.764000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:33",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104491,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 26,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 29
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 114
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 20046250,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 29,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 388,
+    "micros": 388504,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 127,
+    "deadline": "2026-11-01 04:48:33.766000",
+    "ts": "2026-11-01 04:43:34.156000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:34",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104492,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 30,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 33
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 87
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 11830750,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 33,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 447,
+    "micros": 447767,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 685,
+    "deadline": "2026-11-01 04:48:34.157000",
+    "ts": "2026-11-01 04:43:34.614000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  },
+  {
+    "op": "command",
+    "ns": "benchmark.orders",
+    "isFromPriorityPortConnection": false,
+    "command": {
+      "aggregate": "orders",
+      "pipeline": [
+        {
+          "$match": {
+            "payment.status": "completed",
+            "timestamp": {
+              "$gte": "2026-01-01T00:00:00Z"
+            }
+          }
+        },
+        {
+          "$sort": {
+            "payment.final_total": -1
+          }
+        },
+        {
+          "$limit": 1000
+        },
+        {
+          "$project": {
+            "order_id": 1,
+            "customer.id": 1,
+            "payment.final_total": 1
+          }
+        }
+      ],
+      "allowDiskUse": true,
+      "maxTimeMS": 300000,
+      "comment": "bdaas:b3eb496630d944eb84eb68569d85e2ce:m:0:35",
+      "cursor": {
+        "batchSize": 1001
+      },
+      "lsid": {
+        "id": "b'\\xa2\\x95\\xfaNgMM/\\xb8\\xc2\\x99\\xe5\\x84\\xce\\xbd\\xdd'"
+      },
+      "$db": "benchmark"
+    },
+    "opid": 104493,
+    "keysExamined": 228931,
+    "docsExamined": 228931,
+    "peakTrackedMemBytes": 1451846,
+    "hasSortStage": true,
+    "cursorExhausted": true,
+    "numYield": 24,
+    "nreturned": 1000,
+    "planCacheShapeHash": "1F1F8489",
+    "queryHash": "1F1F8489",
+    "planCacheKey": "57042284",
+    "queryShapeHash": "5C9BA6D43A54E85D02F43649D4272FAFCC50DD73C88080BA65327ED0E8A8DB61",
+    "queryFramework": "classic",
+    "planRanker": "none",
+    "locks": {
+      "Global": {
+        "acquireCount": {
+          "r": 27
+        }
+      }
+    },
+    "flowControl": {},
+    "storage": {
+      "timeWaitingMicros": {
+        "storageEngineMicros": 56
+      }
+    },
+    "responseLength": 147995,
+    "protocol": "op_msg",
+    "cpuNanos": 18402291,
+    "queues": {
+      "ingress": {
+        "admissions": 1,
+        "totalTimeQueuedMicros": 0
+      },
+      "ingress_request": {},
+      "execution": {
+        "admissions": 27,
+        "totalTimeQueuedMicros": 0
+      },
+      "writeThrottle": {}
+    },
+    "millis": 350,
+    "micros": 350153,
+    "planSummary": "IXSCAN { timestamp: 1 }",
+    "planningTimeMicros": 122,
+    "deadline": "2026-11-01 04:48:34.618000",
+    "ts": "2026-11-01 04:43:34.972000",
+    "client": "172.19.0.1",
+    "allUsers": [],
+    "user": ""
+  }
+]
