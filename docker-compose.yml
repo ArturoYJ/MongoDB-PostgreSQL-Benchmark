@@ -1,0 +1,92 @@
+services:
+  # Telemetry Stack (cgroups v2 + Host Telemetry) - Restricted to 127.0.0.1 loopback
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor@sha256:3de2bd5203120b866d74a9b283b2ffb8ec382fbf9dc321814700c6ea6f44ec57
+    platform: linux/arm64
+    container_name: benchmark_cadvisor
+    privileged: true
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk/:/dev/disk:ro
+    restart: unless-stopped
+
+  node-exporter:
+    image: prom/node-exporter@sha256:1b4e4438faca4dd7e001dd445d161a4a2091b0fededa84093b3a8dfeae1f1be0
+    platform: linux/arm64
+    container_name: benchmark_node_exporter
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.rootfs=/rootfs'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    ports:
+      - "127.0.0.1:9100:9100"
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus@sha256:fa3302279710be2f21a8301ec17a8b4f2301fd829bd113839b3b6b02b6f191a2
+    platform: linux/arm64
+    container_name: benchmark_prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention.time=1d'
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "127.0.0.1:9090:9090"
+    depends_on:
+      - cadvisor
+      - node-exporter
+    restart: unless-stopped
+
+  # Database Engine: MongoDB (WiredTiger, standalone, unsharded, latest-stable)
+  mongodb:
+    image: mongo@sha256:452bdaf2127b8ff851e31410a267809b9829eded219979f2210e7c7efb85a058
+    platform: linux/arm64
+    container_name: benchmark_mongodb
+    ports:
+      - "127.0.0.1:27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=benchmark
+    volumes:
+      - mongodb_data:/data/db
+      - ./data:/data/import:ro
+    cpus: ${BENCHMARK_CPUS:-4.0}
+    mem_limit: ${BENCHMARK_MEMORY:-4096m}
+    memswap_limit: ${BENCHMARK_MEMORY:-4096m}
+    mem_swappiness: 0
+
+  # Database Engine: PostgreSQL 18 (latest-stable official release)
+  postgresql:
+    image: postgres@sha256:3a4264520e121176619f54ff867d12774bc81e95e7b84db58d63bccdb6144b81
+    platform: linux/arm64
+    container_name: benchmark_postgresql
+    ports:
+      - "127.0.0.1:5434:5432"
+    environment:
+      - POSTGRES_DB=benchmark
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql
+      - ./data:/data/import:ro
+    cpus: ${BENCHMARK_CPUS:-4.0}
+    mem_limit: ${BENCHMARK_MEMORY:-4096m}
+    memswap_limit: ${BENCHMARK_MEMORY:-4096m}
+    mem_swappiness: 0
+
+volumes:
+  mongodb_data:
+  postgres_data:
+  prometheus_data:
