@@ -1,0 +1,502 @@
+
+--- STDERR ---
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:40.436 UTC [6782] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:40.436 UTC [6782] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:40.439 UTC [6779] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:40.439 UTC [6779] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:40.440 UTC [6783] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:40.440 UTC [6783] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:40.442 UTC [6772] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:40.442 UTC [6772] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:40.443 UTC [6784] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:40.443 UTC [6784] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:40.445 UTC [6787] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:40.445 UTC [6787] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:40.730 UTC [6789] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:40.730 UTC [6789] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:40.740 UTC [6786] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:40.740 UTC [6786] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:41.143 UTC [6792] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:41.143 UTC [6792] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:41.331 UTC [6797] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:41.331 UTC [6797] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:41.338 UTC [6795] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:41.338 UTC [6795] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:41.338 UTC [6791] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:41.338 UTC [6791] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:41.346 UTC [6790] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:41.346 UTC [6790] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:41.437 UTC [6799] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:41.437 UTC [6799] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:41.449 UTC [6798] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:41.449 UTC [6798] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:41.548 UTC [6800] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:41.548 UTC [6800] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:41.648 UTC [6803] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:41.648 UTC [6803] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:41.651 UTC [6807] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:41.651 UTC [6807] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:41.833 UTC [6801] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:41.833 UTC [6801] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:41.838 UTC [6806] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:41.838 UTC [6806] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:19:41.843 UTC [6805] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:19:41.843 UTC [6805] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:09.732 UTC [6843] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:09.732 UTC [6843] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:09.936 UTC [6844] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:09.936 UTC [6844] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.033 UTC [6849] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.033 UTC [6849] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.037 UTC [6848] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.037 UTC [6848] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.038 UTC [6852] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.038 UTC [6852] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.039 UTC [6847] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.039 UTC [6847] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.040 UTC [6845] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.040 UTC [6845] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.051 UTC [6855] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.051 UTC [6855] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.053 UTC [6854] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.053 UTC [6854] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.133 UTC [6851] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.133 UTC [6851] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.146 UTC [6857] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.146 UTC [6857] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.148 UTC [6862] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.148 UTC [6862] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.230 UTC [6867] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.230 UTC [6867] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.231 UTC [6861] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.231 UTC [6861] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.234 UTC [6853] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.234 UTC [6853] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.234 UTC [6870] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.234 UTC [6870] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.236 UTC [6860] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.236 UTC [6860] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.239 UTC [6866] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.239 UTC [6866] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.242 UTC [6858] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.242 UTC [6858] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.336 UTC [6856] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.336 UTC [6856] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.340 UTC [6869] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.340 UTC [6869] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.432 UTC [6865] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.432 UTC [6865] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.641 UTC [6868] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.641 UTC [6868] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.748 UTC [6878] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.748 UTC [6878] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:10.832 UTC [6872] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:10.832 UTC [6872] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:11.043 UTC [6880] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:11.043 UTC [6880] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:11.048 UTC [6881] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:11.048 UTC [6881] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:11.533 UTC [6883] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:11.533 UTC [6883] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:11.537 UTC [6885] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:11.537 UTC [6885] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:11.538 UTC [6886] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:11.538 UTC [6886] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:11.545 UTC [6882] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:11.545 UTC [6882] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:11.953 UTC [6890] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:11.953 UTC [6890] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:12.031 UTC [6889] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:12.031 UTC [6889] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
+2026-11-02 01:23:12.333 UTC [6887] ERROR:  canceling statement due to statement timeout
+2026-11-02 01:23:12.333 UTC [6887] STATEMENT:  SELECT data->>'order_id' AS order_id,
+	       data->'customer'->>'id' AS customer_id,
+	       (data->'payment'->>'final_total')::numeric AS final_total
+	FROM orders
+	WHERE data->'payment'->>'status' = 'completed'
+	  AND (data->>'timestamp')::timestamptz >= '2026-01-01 00:00:00Z'
+	ORDER BY (data->'payment'->>'final_total')::numeric DESC
+	LIMIT 1000;
