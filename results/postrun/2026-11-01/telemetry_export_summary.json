@@ -1,0 +1,79 @@
+{
+  "requested_start": 1793509245,
+  "requested_end": 1793583129.199727,
+  "exports": {
+    "container_memory_rss": {
+      "series": 37,
+      "samples": 198978,
+      "first": 1793509244.234,
+      "last": 1793583128.427
+    },
+    "container_cpu_cfs_throttled_seconds_total": {
+      "series": 6,
+      "samples": 48775,
+      "first": 1793509244.234,
+      "last": 1793583129.165
+    },
+    "container_cpu_usage_seconds_total": {
+      "series": 10,
+      "samples": 196174,
+      "first": 1793509244.234,
+      "last": 1793583129.165
+    },
+    "container_last_seen": {
+      "series": 37,
+      "samples": 369491,
+      "first": 1793509244.477,
+      "last": 1793583128.77
+    },
+    "up": {
+      "series": 3,
+      "samples": 221655,
+      "first": 1793509244.47,
+      "last": 1793583129.112
+    },
+    "node_memory_MemAvailable_bytes": {
+      "series": 1,
+      "samples": 73885,
+      "first": 1793509244.772,
+      "last": 1793583129.064
+    },
+    "node_memory_SwapTotal_bytes": {
+      "series": 1,
+      "samples": 73885,
+      "first": 1793509244.772,
+      "last": 1793583129.064
+    },
+    "node_memory_SwapFree_bytes": {
+      "series": 1,
+      "samples": 73885,
+      "first": 1793509244.772,
+      "last": 1793583129.064
+    },
+    "node_vmstat_pswpin": {
+      "series": 1,
+      "samples": 73885,
+      "first": 1793509244.772,
+      "last": 1793583129.064
+    },
+    "node_vmstat_pswpout": {
+      "series": 1,
+      "samples": 73885,
+      "first": 1793509244.772,
+      "last": 1793583129.064
+    },
+    "node_disk_read_bytes_total": {
+      "series": 18,
+      "samples": 1329930,
+      "first": 1793509244.772,
+      "last": 1793583129.064
+    },
+    "node_disk_written_bytes_total": {
+      "series": 18,
+      "samples": 1329930,
+      "first": 1793509244.772,
+      "last": 1793583129.064
+    }
+  },
+  "notes": "Available raw samples only; no completeness assertion. Container identity/time-window mapping still requires validation."
+}

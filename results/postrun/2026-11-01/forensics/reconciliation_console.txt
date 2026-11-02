@@ -1,0 +1,43 @@
+{
+  "log_attempts": 198,
+  "matched_rows": 198,
+  "unmatched_attempts": [],
+  "row_mismatches": [],
+  "all_classifications": {
+    "full_measurement_performance_candidate": 108,
+    "timeout_incomplete_measurement": 39,
+    "forced_worker_termination_partial_results": 3,
+    "warmup_sigkill_failure_oom_consistent": 18,
+    "full_measurement_persistent_oom_label_suspected": 30
+  },
+  "latest_classifications": {
+    "full_measurement_performance_candidate": 108,
+    "timeout_incomplete_measurement": 15,
+    "forced_worker_termination_partial_results": 3,
+    "warmup_sigkill_failure_oom_consistent": 6,
+    "full_measurement_persistent_oom_label_suspected": 30
+  },
+  "distinct_logged_sigkill_events": 18,
+  "benchmark_log_sha256": "b3f39c388c9bfca56152f68d31930372be1a4b16269a64b0c288ce7e01a37891",
+  "caveat": "Derived labels are not corrected canonical statuses. SIGKILL is consistent with OOM but is not standalone kernel-cause proof. Progress bounds are approximate."
+}
+Latest failing/suspect groups:
+('mongodb', 'PROFILE_C_SEVERE', 'Q1', '50', 'timeout_incomplete_measurement') 3
+('mongodb', 'PROFILE_C_SEVERE', 'Q2_allowDiskUse_false', '50', 'forced_worker_termination_partial_results') 2
+('mongodb', 'PROFILE_C_SEVERE', 'Q2_allowDiskUse_true', '50', 'forced_worker_termination_partial_results') 1
+('postgresql', 'PROFILE_A_BASELINE', 'Q1', '50', 'timeout_incomplete_measurement') 3
+('postgresql', 'PROFILE_B_MEDIUM', 'Q1', '50', 'warmup_sigkill_failure_oom_consistent') 3
+('postgresql', 'PROFILE_B_MEDIUM', 'Q2_work_mem_4MB', '1', 'full_measurement_persistent_oom_label_suspected') 3
+('postgresql', 'PROFILE_B_MEDIUM', 'Q2_work_mem_4MB', '10', 'full_measurement_persistent_oom_label_suspected') 3
+('postgresql', 'PROFILE_B_MEDIUM', 'Q2_work_mem_4MB', '50', 'full_measurement_persistent_oom_label_suspected') 3
+('postgresql', 'PROFILE_B_MEDIUM', 'Q2_work_mem_64MB', '1', 'full_measurement_persistent_oom_label_suspected') 3
+('postgresql', 'PROFILE_B_MEDIUM', 'Q2_work_mem_64MB', '10', 'full_measurement_persistent_oom_label_suspected') 3
+('postgresql', 'PROFILE_B_MEDIUM', 'Q2_work_mem_64MB', '50', 'full_measurement_persistent_oom_label_suspected') 3
+('postgresql', 'PROFILE_C_SEVERE', 'Q1', '10', 'timeout_incomplete_measurement') 3
+('postgresql', 'PROFILE_C_SEVERE', 'Q1', '50', 'warmup_sigkill_failure_oom_consistent') 3
+('postgresql', 'PROFILE_C_SEVERE', 'Q2_work_mem_4MB', '1', 'full_measurement_persistent_oom_label_suspected') 3
+('postgresql', 'PROFILE_C_SEVERE', 'Q2_work_mem_4MB', '10', 'full_measurement_persistent_oom_label_suspected') 3
+('postgresql', 'PROFILE_C_SEVERE', 'Q2_work_mem_4MB', '50', 'timeout_incomplete_measurement') 3
+('postgresql', 'PROFILE_C_SEVERE', 'Q2_work_mem_64MB', '1', 'full_measurement_persistent_oom_label_suspected') 3
+('postgresql', 'PROFILE_C_SEVERE', 'Q2_work_mem_64MB', '10', 'full_measurement_persistent_oom_label_suspected') 3
+('postgresql', 'PROFILE_C_SEVERE', 'Q2_work_mem_64MB', '50', 'timeout_incomplete_measurement') 3
