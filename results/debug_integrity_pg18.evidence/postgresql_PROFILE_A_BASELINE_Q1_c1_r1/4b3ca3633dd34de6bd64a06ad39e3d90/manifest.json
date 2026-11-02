@@ -1,0 +1,71 @@
+{
+  "args": {
+    "engine": "postgresql",
+    "profile": "PROFILE_A_BASELINE",
+    "query": "Q1",
+    "concurrency": 1,
+    "run_number": 1,
+    "variant": "default",
+    "warmup": 2.0,
+    "duration": 15.0,
+    "cooldown": 1.0,
+    "query_timeout": 60.0,
+    "output_csv": "results/debug_integrity_pg18.csv",
+    "prometheus_url": "http://127.0.0.1:9090",
+    "pg_port": 5434
+  },
+  "contract": "56ec4da06545c9aaebb58cf8bb4e07654b74b341c3cdd85f27d0e847c60702d6",
+  "attempt": "4b3ca3633dd34de6bd64a06ad39e3d90",
+  "key": "postgresql_PROFILE_A_BASELINE_Q1_c1_r1",
+  "valid": false,
+  "environment": {
+    "container_id": "a0fd7c450345bc1a381badb1ceae1359258ba08f366ce86bbcb0ef034cfef67d",
+    "image": "sha256:3a4264520e121176619f54ff867d12774bc81e95e7b84db58d63bccdb6144b81",
+    "architecture": "arm64",
+    "profile": "PROFILE_A_BASELINE",
+    "cgroups": "cpu.max\n400000 100000\nmemory.max\n4294967296\nmemory.swap.max\n0\nmemory.events\nlow 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n"
+  },
+  "oom_events": [],
+  "window": {
+    "monotonic": [
+      18.73590225,
+      33.735902249999995
+    ],
+    "epoch": [
+      1793507838.8052151,
+      1793507853.8052151
+    ]
+  },
+  "completed": 2,
+  "tail_completions": 1,
+  "worker_errors": [],
+  "error": "[Errno 2] No such file or directory: 'results/debug_integrity_pg18.evidence/postgresql_PROFILE_A_BASELINE_Q1_c1_r1/4b3ca3633dd34de6bd64a06ad39e3d90/replay.json'",
+  "status": "error",
+  "observed_engine_failure": false,
+  "worker_results": [
+    {
+      "worker": 0,
+      "records": [
+        {
+          "tag": "bdaas:4b3ca3633dd34de6bd64a06ad39e3d90:m:0:0",
+          "start": 18.748771291,
+          "end": 25.484546291,
+          "ok": true
+        },
+        {
+          "tag": "bdaas:4b3ca3633dd34de6bd64a06ad39e3d90:m:0:1",
+          "start": 25.487914666,
+          "end": 29.85751075,
+          "ok": true
+        },
+        {
+          "tag": "bdaas:4b3ca3633dd34de6bd64a06ad39e3d90:m:0:2",
+          "start": 29.8609815,
+          "end": 34.262781791,
+          "ok": true
+        }
+      ],
+      "error": null
+    }
+  ]
+}
