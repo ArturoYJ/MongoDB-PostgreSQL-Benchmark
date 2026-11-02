@@ -1,0 +1,24 @@
+Limit  (cost=104727.02..104824.04 rows=833 width=96) (actual time=1023.134..1039.619 rows=1000.00 loops=1)
+  Buffers: shared hit=74 read=97978
+  ->  Gather Merge  (cost=104727.02..104824.04 rows=833 width=96) (actual time=1007.234..1023.640 rows=1000.00 loops=1)
+        Workers Planned: 2
+        Workers Launched: 2
+        Buffers: shared hit=74 read=97978
+        ->  Sort  (cost=103727.00..103727.87 rows=347 width=96) (actual time=986.636..986.690 rows=792.67 loops=3)
+              Sort Key: ((((data -> 'payment'::text) ->> 'final_total'::text))::numeric) DESC
+              Sort Method: top-N heapsort  Memory: 273kB
+              Buffers: shared hit=74 read=97978
+              Worker 0:  Sort Method: top-N heapsort  Memory: 274kB
+              Worker 1:  Sort Method: top-N heapsort  Memory: 275kB
+              ->  Parallel Seq Scan on orders  (cost=0.00..103712.36 rows=347 width=96) (actual time=2.879..974.177 rows=38225.33 loops=3)
+                    Filter: ((((data -> 'payment'::text) ->> 'status'::text) = 'completed'::text) AND (((data ->> 'timestamp'::text))::timestamp with time zone >= '2026-01-01 00:00:00+00'::timestamp with time zone))
+                    Rows Removed by Filter: 128441
+                    Buffers: shared read=97978
+Planning:
+  Buffers: shared hit=101 read=14
+Planning Time: 2.834 ms
+JIT:
+  Functions: 13
+  Options: Inlining false, Optimization false, Expressions true, Deforming true
+  Timing: Generation 1.169 ms (Deform 0.157 ms), Inlining 0.000 ms, Optimization 2.579 ms, Emission 19.838 ms, Total 23.585 ms
+Execution Time: 1180.455 ms
