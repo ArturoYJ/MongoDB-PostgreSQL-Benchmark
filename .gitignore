@@ -1,0 +1,23 @@
+.venv/
+.benchmark-run.lock/
+__pycache__/
+*.pyc
+data/*.jsonl
+.DS_Store
+.superpowers/
+*.swp
+*.swo
+results/final/figures/page_*.png
+
+.benchmark-cell.lock/
+
+# Exclusiones de flujo agentico y gobernanza interna (solo local)
+Agents/
+Context/
+docs/
+
+# Documentos academicos y reportes (entrega directa en plataforma escolar)
+*.pdf
+*.typ
+
+
